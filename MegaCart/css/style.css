@@ -1,0 +1,356 @@
+/* Step 2: css/style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2196f3;
+}
+
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1976d2;
+}
+
+p {
+    font-size: 14px;
+    text-align: center;
+}
+
+a {
+    color: #2196f3;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    input,
+    button {
+        font-size: 14px;
+    }
+} 
+
+/* Step 8: css/style.css */
+
+.main {
+    height: 100vh;
+    width: 100%;    
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background: #333;
+    color: white;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.navbar .logo {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-weight: 500;
+}
+
+.footer {
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Products Page */
+#product-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    background: #f4f4f4;
+}
+
+/* Product Cards */
+.product-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    width: 250px;
+    margin: 1rem;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.product-card button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #333;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.product-card button:hover {
+    background: #ff5722;
+}
+
+/* About Page */
+
+.about {
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    background: #f9f9f9;
+    flex-direction: column;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.about img{
+    height: 300px;
+}
+
+.about-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about h1 {
+    text-align: center;
+    font-size: 4rem;
+
+}
+
+.about h1 span {
+    color: #ff6347;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px;
+}
+
+.about p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.about ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about ul li {
+    background: #e0e0e0;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.about h2 {
+    color: #333;
+    margin-top: 20px;
+}
+/* Cart Page */
+.cart {
+    padding: 2rem;
+}
+
+.cart h1 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 1rem;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 1rem;
+    border-radius: 8px;
+}
+
+.cart-details h3 {
+    margin-bottom: 0.5rem;
+}
+
+.cart-details input {
+    width: 60px;
+    padding: 0.25rem;
+    margin: 0 0.5rem;
+}
+
+.cart-details button {
+    background: crimson;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #333;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+#cart-total {
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-item img {
+        margin-bottom: 1rem;
+    }
+
+    .cart-details input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}

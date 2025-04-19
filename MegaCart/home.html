@@ -1,0 +1,39 @@
+<!-- Step 4: home.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MegaCart - Home</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body onload="checkAuth(); fetchProducts();updateCartCount();">
+    <div class="main">
+        <header class="navbar">
+            <div class="logo">🛒 MegaCart</div>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="cart.html" id="cart-link">Cart</a>
+                <a href="#" onclick="logout()"><button>Logout</button></a>
+            </nav>
+        </header>
+
+        <main class="product-grid" id="product-container">
+        <!-- Products will be injected here -->
+        </main>
+    
+        <footer class="footer">
+            <p>&copy; 2025 MegaCart. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/products.js"></script>
+</body>
+
+</html>

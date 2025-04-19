@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoMob-Mechanic</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header id="main-header">
+        <nav>
+            <div class="logo">
+                <i class="fas fa-car"></i>
+                <span style="margin-left: 8px;">AutoMob-Mechanic</span>
+            </div>
+            <button class="menu-toggle">☰</button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#" id="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Login Page -->
+    <div id="login-page" class="page-content hidden">
+        <div class="container">
+            <div class="auth-container">
+                <h2>Login to Your Account</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-username">Username</label>
+                        <input type="text" id="login-username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+                <div class="auth-links">
+                    <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Page -->
+    <div id="signup-page" class="page-content hidden">
+        <div class="container">
+            <div class="auth-container">
+                <h2>Create an Account</h2>
+                <form id="signup-form">
+                    <div class="form-group">
+                        <label for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-username">Username</label>
+                        <input type="text" id="signup-username" placeholder="Choose a username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" placeholder="Choose a password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-confirm-password">Confirm Password</label>
+                        <input type="password" id="signup-confirm-password" placeholder="Confirm your password"
+                            required>
+                    </div>
+                    <button type="submit" class="btn">Sign Up</button>
+                </form>
+                <div class="auth-links">
+                    <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Page -->
+    <div id="home-page" class="page-content">
+        <div class="hero">
+            <h1>Welcome to AutoMob-Mechanic</h1>
+            <p>Your trusted partner for all automobile service and repair needs.</p>
+            <a href="booking.html" class="btn">Book a Service</a>
+        </div>
+
+        <div class="container">
+            <h2>Our Premium Services</h2>
+            <p>At AutoMob-Mechanic, we provide comprehensive automobile services to ensure your vehicle runs smoothly
+                and safely. Our team of expert mechanics uses the latest technology to diagnose and fix issues
+                efficiently.</p>
+
+            <div class="services-highlight">
+                <div class="service-card">
+                    <img src="./images/preventive-maintenance.jpg" alt="Preventive Maintenance">
+                    <h3>Preventive Maintenance</h3>
+                    <p>Regular maintenance to keep your vehicle in optimal condition and prevent costly repairs.</p>
+                    <a href="service-preventive.html" class="btn">Learn More</a>
+                </div>
+
+                <div class="service-card">
+                    <img src="./images/body-repair.jpg" alt="Body Repair">
+                    <h3>Body Repair</h3>
+                    <p>Professional body repair services to restore your vehicle's appearance after accidents or damage.
+                    </p>
+                    <a href="service-body.html" class="btn">Learn More</a>
+                </div>
+
+                <div class="service-card">
+                    <img src="./images/car-care.jpg" alt="Car Care">
+                    <h3>Car Care</h3>
+                    <p>Complete car care services including cleaning, polishing, and detailing for a fresh look.</p>
+                    <a href="service-care.html" class="btn">Learn More</a>
+                </div>
+            </div>
+
+            <h2>Why Choose Us?</h2>
+            <div class="services-highlight">
+                <div class="service-card">
+                    <h3>Expert Technicians</h3>
+                    <p>Our certified technicians have years of experience working with all vehicle types and models.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Quality Parts</h3>
+                    <p>We use only high-quality, genuine parts to ensure the longevity of your repairs.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Customer Satisfaction</h3>
+                    <p>Our priority is your satisfaction. We go the extra mile to ensure you're happy with our service.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Page -->
+    <div id="services-page" class="page-content hidden">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p>We provide a wide range of automotive services to keep your vehicle running smoothly. Choose from our
+                comprehensive service packages below:</p>
+
+            <div class="services-container">
+                <div class="service-item">
+                    <img src="./images/preventive-maintenance.jpg" alt="Preventive Maintenance">
+                    <div class="service-content">
+                        <h3>Preventive Maintenance</h3>
+                        <p>Regular maintenance services to prevent costly repairs and keep your vehicle in optimal
+                            condition.</p>
+                        <a href="service-preventive.html" class="btn">View Details</a>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <img src="./images/body-repair.jpg" alt="Body Repair">
+                    <div class="service-content">
+                        <h3>Body Repair</h3>
+                        <p>Professional body repair services to restore your vehicle's appearance after accidents or
+                            damage.</p>
+                        <a href="service-body.html" class="btn">View Details</a>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <img src="./images/car-care.jpg" alt="Car Care">
+                    <div class="service-content">
+                        <h3>Car Care</h3>
+                        <p>Complete car care services including cleaning, polishing, and detailing for a fresh look.</p>
+                        <a href="service-care.html" class="btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preventive Maintenance Service Page -->
+    <div id="service-preventive-page" class="page-content hidden">
+        <div class="container">
+            <div class="service-detail">
+                <img src="./images/preventive-maintenance-service.jpg" alt="Preventive Maintenance">
+                <h2>Preventive Maintenance Service</h2>
+                <p>Our comprehensive preventive maintenance service is designed to keep your vehicle running smoothly
+                    and prevent costly repairs down the road. Regular maintenance is essential for extending the life of
+                    your vehicle and ensuring optimal performance.</p>
+
+                <h3>What's Included:</h3>
+                <ul class="service-features">
+                    <li>Oil and filter change</li>
+                    <li>Tire rotation and pressure check</li>
+                    <li>Brake inspection and adjustment</li>
+                    <li>Fluid levels check and top-up</li>
+                    <li>Battery test and terminal cleaning</li>
+                    <li>Air filter replacement</li>
+                    <li>Spark plug inspection</li>
+                    <li>Belt and hose inspection</li>
+                    <li>Suspension and steering check</li>
+                    <li>Comprehensive multi-point inspection</li>
+                </ul>
+
+                <p>Our certified technicians use state-of-the-art diagnostic equipment to identify potential issues
+                    before they become major problems. We recommend preventive maintenance every 5,000 miles or 6
+                    months, whichever comes first.</p>
+
+                <a href="booking.html" class="btn">Book This Service</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Body Repair Service Page -->
+    <div id="service-body-page" class="page-content hidden">
+        <div class="container">
+            <div class="service-detail">
+                <img src="./images/body-repair-service.jpg" alt="Body Repair">
+                <h2>Body Repair Service</h2>
+                <p>Our body repair service is designed to restore your vehicle's appearance and structural integrity
+                    after accidents or damage. We use advanced techniques and high-quality materials to ensure your
+                    vehicle looks as good as new.</p>
+
+                <h3>What's Included:</h3>
+                <ul class="service-features">
+                    <li>Dent removal and repair</li>
+                    <li>Panel replacement</li>
+                    <li>Frame straightening</li>
+                    <li>Paint matching and application</li>
+                    <li>Scratch removal</li>
+                    <li>Bumper repair or replacement</li>
+                    <li>Window and windshield replacement</li>
+                    <li>Paint protection coating</li>
+                    <li>Rust repair and prevention</li>
+                    <li>Post-repair quality inspection</li>
+                </ul>
+
+                <p>Our skilled technicians have years of experience in body repair and use the latest tools and
+                    techniques to restore your vehicle to its pre-accident condition. We work with all insurance
+                    companies to make the repair process as smooth as possible.</p>
+
+                <a href="booking.html" class="btn">Book This Service</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Car Care Service Page -->
+    <div id="service-care-page" class="page-content hidden">
+        <div class="container">
+            <div class="service-detail">
+                <img src="./images/car-care-service.jpg" alt="Car Care">
+                <h2>Car Care Service</h2>
+                <p>Our premium car care service is designed to keep your vehicle looking its best inside and out. From
+                    basic washing to complete detailing, we offer a range of car care services to suit your needs and
+                    budget.</p>
+
+                <h3>What's Included:</h3>
+                <ul class="service-features">
+                    <li>Exterior wash and wax</li>
+                    <li>Interior vacuum and cleaning</li>
+                    <li>Dashboard and console detailing</li>
+                    <li>Leather conditioning</li>
+                    <li>Glass cleaning and polishing</li>
+                    <li>Tire dressing</li>
+                    <li>Engine bay cleaning</li>
+                    <li>Headlight restoration</li>
+                    <li>Paint protection application</li>
+                    <li>Odor elimination</li>
+                </ul>
+
+                <p>Our car care specialists use only high-quality products that are safe for your vehicle and the
+                    environment. Regular car care not only enhances the appearance of your vehicle but also helps
+                    protect it from environmental damage and preserves its value.</p>
+
+                <a href="booking.html" class="btn">Book This Service</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Page -->
+    <div id="booking-page" class="page-content hidden">
+        <div class="container">
+            <h1>Book a Service</h1>
+            <p>Fill out the form below to schedule a service for your vehicle. Our team will confirm your appointment
+                within 24 hours.</p>
+
+            <div class="booking-form">
+                <form id="book-service-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service-type">Service Type</label>
+                        <select id="service-type" required>
+                            <option value="">Select a service</option>
+                            <option value="Preventive Maintenance">Preventive Maintenance</option>
+                            <option value="Body Repair">Body Repair</option>
+                            <option value="Car Care">Car Care</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vehicle-make">Vehicle Make</label>
+                        <input type="text" id="vehicle-make" placeholder="Enter the make of your vehicle" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vehicle-model">Vehicle Model</label>
+                        <input type="text" id="vehicle-model" placeholder="Enter the model of your vehicle" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="booking-date">Preferred Date</label>
+                        <input type="date" id="booking-date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Additional Notes</label>
+                        <textarea id="notes" rows="4"
+                            placeholder="Enter any additional information about your service needs"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">Book Service</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Success Page -->
+    <div id="booking-success-page" class="page-content hidden">
+        <div class="container">
+            <div class="success-container">
+                <div class="success-icon">✓</div>
+                <h2>Booking Successful!</h2>
+                <p>Thank you for choosing AutoMob-Mechanic. Your booking has been confirmed.</p>
+                
+                <div class="booking-details">
+                    <h3>Booking Details</h3>
+                    <p><strong>Name:</strong> <span id="confirm-name"></span></p>
+                    <p><strong>Service:</strong> <span id="confirm-service"></span></p>
+                    <p><strong>Date:</strong> <span id="confirm-date"></span></p>
+                    <p><strong>Vehicle:</strong> <span id="confirm-vehicle"></span></p>
+                </div>
+                
+                <img src="./images/thank-you.jpg" alt="th" hweight="500">
+                <p>Our representatives will take care of everything and contact you shortly to confirm your appointment.
+                </p>
+
+                <a href="index.html" class="btn">Return to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reports Page -->
+    <div id="reports-page" class="page-content hidden">
+        <div class="container">
+            <h1>Your Bookings</h1>
+            <p>View all your service bookings below:</p>
+
+            <div class="reports-container">
+                <div id="bookings-list">
+                    <!-- Bookings will be populated here dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AutoMob-Mechanic</h3>
+                    <p>Your trusted partner for all automobile service and repair needs.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="booking.html">Book a Service</a></li>
+                        <li><a href="reports.html">My Bookings</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>123 Auto Street, Car City</p>
+                    <p>Phone: (123) 456-7890</p>
+                    <p>Email: info@automob-mechanic.com</p>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 AutoMob-Mechanic. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add script tag here - JavaScript will be provided separately -->
+    <script src="./script.js"></script>
+</body>
+
+</html>

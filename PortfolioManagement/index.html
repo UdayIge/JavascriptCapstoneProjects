@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Header and Navigation -->
+        <header>
+            <div class="container">
+                <nav class="navbar">
+                    <div class="logo">Portfolio Management</div>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="#" class="nav-link" data-page="dashboard">Dashboard</a></li>
+                        <li><a href="#" class="nav-link" data-page="portfolio">My Portfolio</a></li>
+                        <li><a href="#" class="nav-link" data-page="recommendations">Recommendations</a></li>
+                        <li><a href="#" id="logoutBtn">Logout</a></li>
+                    </ul>
+                    <div class="hamburger" id="hamburger">☰</div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container">
+            <!-- Landing Page -->
+            <section id="landing" class="page active">
+                <div class="hero">
+                    <h1>Portfolio Management</h1>
+                    <p>Track, Trade & Grow Your Wealth. Our platform provides real-time stock tracking, personalized
+                        recommendations, and intuitive portfolio management tools.</p>
+                    <div class="hero-buttons">
+                        <button class="btn" id="goToLoginBtn">Login</button>
+                        <button class="btn btn-secondary" id="goToSignupBtn">Sign Up</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Login Page -->
+            <section id="login" class="page">
+                <div class="auth-container card">
+                    <h2>Log into your account</h2>
+                    <div id="loginMessage"></div>
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="loginUsername">Username</label>
+                            <input type="text" id="loginUsername" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-block">Login</button>
+                    </form>
+                    <div class="form-footer">
+                        <p>Don't have an account? <a href="#" id="switchToSignup">Sign up here</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sign Up Page -->
+            <section id="signup" class="page">
+                <div class="auth-container card">
+                    <h2>Create a new account</h2>
+                    <div id="signupMessage"></div>
+                    <form id="signupForm">
+                        <div class="form-group">
+                            <label for="signupUsername">Username</label>
+                            <input type="text" id="signupUsername" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupPassword">Password</label>
+                            <input type="password" id="signupPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupConfirmPassword">Confirm Password</label>
+                            <input type="password" id="signupConfirmPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="initialBalance">Initial Balance ($)</label>
+                            <input type="number" id="initialBalance" min="1000" value="10000" required>
+                        </div>
+                        <button type="submit" class="btn btn-block">Sign Up</button>
+                    </form>
+                    <div class="form-footer">
+                        <p>Already have an account? <a href="#" id="switchToLogin">Login here</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dashboard Page -->
+            <section id="dashboard" class="page">
+                <div class="dashboard-header">
+                    <h2>Dashboard</h2>
+                    <p>Welcome, <span id="userWelcome"></span></p>
+                </div>
+
+                <div class="balance-card">
+                    <h3>Available Balance</h3>
+                    <div class="balance-amount">$<span id="availableBalance">0.00</span></div>
+                </div>
+
+                <div class="card">
+                    <h3>Search Stock</h3>
+                    <div class="stock-search">
+                        <input type="text" id="stockSearchInput" placeholder="Enter stock symbol (e.g., AAPL)">
+                        <button class="btn" id="stockSearchBtn">Search</button>
+                    </div>
+                    <div id="stockSearchResult"></div>
+                </div>
+
+                <div class="card live-prices">
+                    <h3>Live Market Prices</h3>
+                    <div id="livePrices" class="prices-grid">
+                        <div class="loading"></div>
+                    </div>
+                </div>
+
+                <div class="card buy-form">
+                    <h3>Buy Stock</h3>
+                    <form id="buyStockForm">
+                        <div class="form-group">
+                            <label for="buySymbol">Stock Symbol</label>
+                            <input type="text" id="buySymbol" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="buyQuantity">Quantity</label>
+                            <input type="number" id="buyQuantity" min="1" value="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="estimatedCost">Estimated Cost</label>
+                            <input type="text" id="estimatedCost" readonly>
+                        </div>
+                        <button type="submit" class="btn">Buy Now</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Portfolio Page -->
+            <section id="portfolio" class="page">
+                <div class="portfolio-header">
+                    <h2>My Portfolio</h2>
+                    <div>
+                        <p>Total Value: <span class="portfolio-value">$<span id="totalPortfolioValue">0.00</span></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div id="portfolioMessage"></div>
+                    <div id="portfolioContent">
+                        <table class="portfolio-table">
+                            <thead>
+                                <tr>
+                                    <th>Symbol</th>
+                                    <th>Quantity</th>
+                                    <th>Current Price</th>
+                                    <th>Total Value</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="portfolioTable">
+                                <!-- Portfolio items will be dynamically added here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recommendations Page -->
+            <section id="recommendations" class="page">
+                <h2>Stock Recommendations</h2>
+                <p>Based on market trends and your portfolio composition</p>
+
+                <div id="recommendationsContent" class="recommendations-grid">
+                    <div class="loading"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>About Us</h3>
+                        <p>Portfolio Management is a powerful tool designed to help you track, manage, and grow your
+                            investment portfolio with ease.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">My Portfolio</a></li>
+                            <li><a href="#">Recommendations</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Market Wisdom</h3>
+                        <p>"The stock market is a device for transferring money from the impatient to the patient." -
+                            Warren Buffett</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Portfolio Management. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Modal for Selling Stocks -->
+        <div class="modal" id="sellModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Sell Stock</h3>
+                    <span class="close">&times;</span>
+                </div>
+                <form id="sellStockForm">
+                    <input type="hidden" id="sellSymbol">
+                    <div class="form-group">
+                        <label for="sellCurrentQuantity">Current Quantity</label>
+                        <input type="text" id="sellCurrentQuantity" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="sellQuantity">Quantity to Sell</label>
+                        <input type="number" id="sellQuantity" min="1" value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sellCurrentPrice">Current Price</label>
+                        <input type="text" id="sellCurrentPrice" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="sellTotal">Total Value</label>
+                        <input type="text" id="sellTotal" readonly>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelSell">Cancel</button>
+                        <button type="submit" class="btn btn-success">Confirm Sell</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js">
+    </script>
+</body>
+
+</html>

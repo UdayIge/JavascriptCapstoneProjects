@@ -1,0 +1,72 @@
+<!-- Step 6: about.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - MegaCart</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body onload="checkAuth(); updateCartCount();">
+    <div class="main">
+
+        <header class="navbar">
+            <div class="logo">🛒 MegaCart</div>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="cart.html" id="cart-link">Cart</a>
+                <a href="#" onclick="logout()">Logout</a>
+            </nav>
+        </header>
+
+        <main class="about">
+            <h1>Welcome to <span>MegaCart</span></h1>
+            <img src="https://www.kindpng.com/picc/m/732-7329685_e-commerce-website-background-image-e-commerce-website.png"
+                    alt="E-commerce Website Background Image - E Commerce Website Background, HD Png Download@kindpng.com">
+            
+            <div class="about-container">
+                <h2>About MegaCart</h2>
+                <p>MegaCart isn't just another online shopping site—it's your one-stop destination for an extraordinary
+                    shopping
+                    experience! ✨
+
+                </p>
+                <p>We bring you the best deals, quirky finds, and daily essentials, all under one cart. Powered by love for
+                    tech
+
+                    and coffee ☕, our mission is to make your shopping smooth, fun, and rewarding.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio delectus aperiam impedit, atque dolorum praesentium nisi nemo quas non mollitia illum dolorem placeat aut assumenda libero dolores, molestiae a! Nisi.
+
+                </p>
+            </div>
+            <div class="about-container">
+                <h2>Our Team 🚀</h2>
+                <ul>
+                    <li><strong>Uday:</strong> Code wizard & backend ninja</li>
+                    <li><strong>Riya:</strong> Design queen & pixel perfectionist</li>
+                    <li><strong>Jay:</strong> The cart guy & data junkie</li>
+                </ul>
+            </div>
+            <div class="about-container">
+                <h2>Our Vision 🌍</h2>
+                <p>To redefine e-commerce for Gen Z—smarter, faster, and with style. Coming soon: Wishlist, Dark Mode, and
+                    more!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempore ipsum cumque quasi nisi, architecto aut nobis cum facilis! Cupiditate repellendus sunt quisquam nesciunt veniam nemo. Atque voluptates rem nisi.
+                </p>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 MegaCart. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

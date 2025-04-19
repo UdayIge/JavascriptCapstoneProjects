@@ -1,0 +1,41 @@
+<!-- We'll begin with index.html: the landing page with login and signup forms -->
+<!-- Step 1: index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MegaCart - Login / Sign Up</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">🛒 MegaCart</div>
+
+        <div class="auth-container">
+            <div class="form" id="login-form">
+                <h2>Login</h2>
+                <input type="text" id="login-username" placeholder="Username" />
+                <input type="password" id="login-password" placeholder="Password" />
+                <button onclick="login()">Login</button>
+                <p>Don't have an account? <a href="#" onclick="toggleForm('signup')">Sign Up</a></p>
+            </div>
+
+            <div class="form hidden" id="signup-form">
+                <h2>Sign Up</h2>
+                <input type="text" id="signup-username" placeholder="Username" />
+                <input type="password" id="signup-password" placeholder="Password" />
+                <button onclick="signup()">Sign Up</button>
+                <p>Already have an account? <a href="#" onclick="toggleForm('login')">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+
+</html>
