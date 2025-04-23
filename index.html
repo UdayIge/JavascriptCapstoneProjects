@@ -1,23 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Capstone Projects</title>
     <style>
-        .body{
-            background-color: #fafafa;
-            font-family: 'Times New Roman', Times, serif;
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --light-bg: #d0e2f5;
+            --dark-bg: #343a40;
+            --text-color: #212529;
+            --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            padding: 2rem;
 
         }
+        .recommendations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .recommendation-card {
+            border-radius: 8px;
+            display: flex;
+            background-color: white;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .recommendation-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .recommendation-header {
+            padding: 15px;
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .recommendation-body {
+            padding: 15px;
+            background-color: white;
+        }
+
+        .recommendation-footer {
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        button{
+            background-color: var(--primary-color);
+            color: #ffffff;
+            border: none;
+            font-weight: bolder;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: var(--secondary-color);
+        }
     </style>
+    <title>Javascript Projects</title>
 </head>
+
 <body>
-    <h1>Javascript Capstone Projects</h1>
-    <ul>
-        <li><a href="./MegaCart/" target="_blank">Mega Cart</a></li>
-        <li><a href="./PortfolioManagement/" target="_blank">Portfolio Management</a></li>
-        <li><a href="./AutoMob-MechanicApp/" target="_blank">AutoMob Mechanic</a></li>
-    </ul>
+    <h1>JavaScript Capstone Projects</h1>
+    <div id="recommendationsContent" class="recommendations-grid">
+        <div class="recommendation-card">
+            <div class="recommendation-header" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://plus.unsplash.com/premium_photo-1742941082676-246d96839907?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTd8fHNob3BwaW5nfGVufDB8fDB8fHww'); ">
+                <h3>MegaCart</h3>
+            </div>
+            <div class="recommendation-body">
+                <h4>E-commerce Web Application</h4>
+                <p>The goal of the MegaCart project is to develop a simple, mobile-responsive e-commerce website using only HTML, CSS, and
+                JavaScript. It aims to provide a seamless shopping experience and mobile-friendly design—all implemented without external libraries or
+                frameworks.</p>
+            </div>
+            <div class="recommendation-footer">
+                <a href="./Javascript/MegaCart/" target="_blank"><button class="btn" onclick="">View Live</button></a>
+            </div>
+        </div>
+        <div class="recommendation-card">
+            <div class="recommendation-header" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1707075891527-5bdcab8c3bf1?q=80&w=1412&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                <h3>Portfolio Management</h3>
+            </div>
+            <div class="recommendation-body">
+                <h4>A Responsive Web Application for Stock Portfolio Tracking</h4>
+                <p>Track, Trade & Grow Your Wealth. Our platform provides real-time stock tracking, personalized recommendations, and
+                intuitive portfolio management tools.</p>
+            </div>
+            <div class="recommendation-footer">
+                <a href="./Javascript/PortfolioManagement/" target="_blank"><button class="btn" onclick="">View Live</button></a>
+            </div>
+        </div>
+        <div class="recommendation-card">
+            <div class="recommendation-header"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./Javascript/AutoMob-MechanicApp/images/hero.jpg');">
+                <h3>AutoMob-MechanicApp</h3>
+            </div>
+            <div class="recommendation-body">
+                <h4>A Client-Side Automobile Service Management System</h4>
+                <p>The primary objective of the AutoMob-Mechanic web application is to create a responsive, user-friendly platform that
+                enables automobile service companies to streamline their service booking process and customer management.</p>
+            </div>
+            <div class="recommendation-footer">
+                <a href="./Javascript/AutoMob-MechanicApp/" target="_blank"><button class="btn" onclick="">View Live</button></a>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
